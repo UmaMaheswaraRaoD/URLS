@@ -35,5 +35,10 @@ https://www.mscharhag.com/java/java-8-date-time-api
 http://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/
 
 
+No, since you are obtaining lock on the SearchBox.class, only one thread will enter the synchronized block at a time. So the first thread enters then finds searchBox and creates it and then leaves the synchronized block, then the second thread enter the block then it finds that the searchBox is not null because the first thread already created it so it will not create a new instance of searchBox
+
+The Double checked pattern is used to avoid obtaining the lock everytime the code is executed, if the call are not happening together then the first condition will fail and the code execution will not execute the locking thus saving resources.
+
+
 
 
