@@ -37,6 +37,7 @@ http://winterbe.com/posts/2014/07/31/java8-stream-tutorial-examples/
 Java 8 exmaples:
 https://www.mkyong.com/java8/java-8-streams-map-examples/
 https://github.com/winterbe/java8-tutorial
+https://github.com/eugenp/tutorials/tree/master/core-java-8
 
 
 No, since you are obtaining lock on the SearchBox.class, only one thread will enter the synchronized block at a time. So the first thread enters then finds searchBox and creates it and then leaves the synchronized block, then the second thread enter the block then it finds that the searchBox is not null because the first thread already created it so it will not create a new instance of searchBox
